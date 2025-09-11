@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Flipkart</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .box1 {
+            background-color: rgb(195, 190, 190);
+            height: 70px;
+            width: 100%;
+            display: flex; /* flex container banaya */
+            align-items: center; /* vertically center align */
+            padding: 0 20px;
+            gap: 15px; /* logo aur search bar ke beech space */
+        }
+        img {
+            height: 50px; /* thoda chhota kar diya */
+            width: 50px;
+            cursor: pointer;
+        }
+        input[type="text"] {
+            width: 300px;
+            height: 35px;
+           
+            font-size: 16px; border-radius: 4px;
+            border: 1px solid #ccc;
+            padding: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="box1">
+            <img src="flipkartlogo.svg" alt="Flipkart Logo" />
+            <input type="text" placeholder="Search for products, brands and more" />
+        </div>
+    </nav>
+</body>
+</html>
