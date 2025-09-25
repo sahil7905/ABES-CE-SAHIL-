@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To Do List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+    }
+    .container {
+      width: 300px;
+      margin: auto;
+      border: 1px solid blue;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 5px;
+    }
+    .label {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .task-input {
+      display: flex;
+      margin-bottom: 10px;
+    }
+    .task-input input {
+      flex: 1;
+      padding: 5px;
+    }
+    .task-input button {
+      margin-left: 5px;
+      padding: 5px 10px;
+    }
+    #taskList {
+      margin-top: 20px;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li::before {
+      content: "* ";
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>To Do List</h2>
+  <div class="label">Add Task:</div>
+
+  <div id="taskInputs">
+    <div class="task-input">
+      <input type="text" placeholder="Enter task" />
+      <button onclick="addTaskField(this)">+</button>
+    </div>
+  </div>
+
+  <div id="taskList" style="display:none;">
+    <h3>Tasks:</h3>
+    <ul id="listDisplay"></ul>
+  </div>
+</div>
+
+<script>
+  let taskCount = 1;
+  const maxTasks = 3;
+
+  function addTaskField(button) {
+    const parentDiv = button.parentElement;
+    const inputValue = parentDiv.querySelector('input').value.trim();
+
+    if (inputValue === "") {
+      alert("Please enter a task before adding a new one.");
+      return;
+    }
+
+    if (taskCount < maxTasks) {
+      taskCount++;
+
+      button.disabled = true;
+
+      const newInputDiv = document.createElement('div');
+      newInputDiv.className = 'task-input';
+
+      const newInput = document.createElement('input');
+      newInput.type = 'text';
+      newInput.placeholder = 'Enter task';
+
+      const newButton = document.createElement('button');
+      newButton.innerText = '+';
+      newButton.onclick = function () {
+        addTaskField(newButton);
+      };
+
+      newInputDiv.appendChild(newInput);
+      newInputDiv.appendChild(newButton);
+
+      document.getElementById('taskInputs').appendChild(newInputDiv);
+    } else {
+      
+      document.getElementById('taskInputs').style.display = 'none';
+      document.querySelector('.label').style.display = 'none';
+      document.getElementById('taskList').style.display = 'block';
+
+      const inputs = document.querySelectorAll('#taskInputs input');
+      const list = document.getElementById('listDisplay');
+      inputs.forEach(input => {
+        const value = input.value.trim();
+        if (value !== "") {
+          const li = document.createElement('li');
+          li.textContent = value;
+          list.appendChild(li);
+        }
+      });
+    }
+  }
+</script>
+
+</body>
+</html>
