@@ -1,26 +1,36 @@
 import React, { useState } from "react";
 
-function LoginPage() {
+function Register() {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleLogin = (e) => {
+  const handleRegister = (e) => {
     e.preventDefault();
 
-    if (email === "" || password === "") {
-      setMessage("Please enter both email and password");
-    } else if (email === "admin@example.com" && password === "12345") {
-      setMessage("Login successful!");
+    if (name === "" || email === "" || password === "") {
+      setMessage("Please fill in all fields");
     } else {
-      setMessage("Invalid email or password");
+      setMessage("✅ Registration successful!");
+      setName("");
+      setEmail("");
+      setPassword("");
     }
   };
 
   return (
     <div style={styles.container}>
-      <h2>Login Page</h2>
-      <form onSubmit={handleLogin} style={styles.form}>
+      <h2>Register Page</h2>
+      <form onSubmit={handleRegister} style={styles.form}>
+        <input
+          type="text"
+          placeholder="Enter Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          style={styles.input}
+        />
+
         <input
           type="email"
           placeholder="Enter Email"
@@ -28,6 +38,7 @@ function LoginPage() {
           onChange={(e) => setEmail(e.target.value)}
           style={styles.input}
         />
+
         <input
           type="password"
           placeholder="Enter Password"
@@ -35,18 +46,16 @@ function LoginPage() {
           onChange={(e) => setPassword(e.target.value)}
           style={styles.input}
         />
-        <button type="submit" style={styles.button}>Login</button>
+
+        <button type="submit" style={styles.button}>Register</button>
       </form>
-      <p style={{ color: "red" }}>{message}</p>
+      <p style={{ color: "green" }}>{message}</p>
     </div>
   );
 }
 
 const styles = {
-  container: {
-    textAlign: "center",
-    marginTop: "100px",
-  },
+  container: { textAlign: "center", marginTop: "100px" },
   form: {
     display: "inline-block",
     textAlign: "left",
@@ -63,7 +72,7 @@ const styles = {
   button: {
     width: "100%",
     padding: "8px",
-    backgroundColor: "blue",
+    backgroundColor: "#C0392B",
     color: "white",
     border: "none",
     borderRadius: "4px",
@@ -71,4 +80,4 @@ const styles = {
   },
 };
 
-export default LoginPage;
+export default Register;

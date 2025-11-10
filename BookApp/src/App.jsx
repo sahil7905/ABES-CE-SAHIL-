@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Nav from './component/Nav';
-import Book from './component/Book';
-import Login from './component/Login';
-import Register from './component/Register';
+import Nav from './Components/Nav';
+import Book from './Components/Book';
+import Login from './Components/Login';
+import Register from './Components/Register';
 import './App.css';
 
 function App() {

@@ -3,4 +3,9 @@
   height: 300px;
   width: 300px;
   background-color: coral;
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
 }
