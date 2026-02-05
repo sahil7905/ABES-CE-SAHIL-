@@ -23,8 +23,8 @@
 
 // })
 // myserver.listen(8000,()=>console.log("server is run"))
-// const fs=require('fs');
-// fs.cpSync("IT-A.txt","CE-A.txt");
+const fs=require('fs');
+fs.cpSync("A.txt","IT-A.txt");
 
 
 
@@ -33,17 +33,17 @@
 
 
 
-const fs=require('fs')
+// const fs=require('fs')
 // fs.writeFile("./IT-A.txt","we are student of it-a",()=>{ })
 
-    fs.readFile("./IT-A","utf-8",(err,result)=>{
-        if(err){
-            console.log("error",err);
-        }
-        else{
-            console.log(result);
-        }
-    })
+    // fs.readFile("./IT-A","utf-8",(err,result)=>{
+    //     if(err){
+    //         console.log("error",err);
+    //     }
+    //     else{
+    //         console.log(result);
+    //     }
+    // })
 
 // const fs=require('fs')
 // // fs.writeFileSync("abes.txt","abes provide btech and mtech")
