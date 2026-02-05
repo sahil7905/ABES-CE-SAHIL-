@@ -35,13 +35,23 @@
 // fs.unlinkSync("./IT-A.txt");
 
 
+// const fs = require('fs');
+
+// fs.cp("CE-A.txt", "cse.txt", (err) => {
+//     if (err) {
+//         console.log("Error:", err);
+//     } else {
+//         console.log("File copied");
+//     }
+// });
+
 const fs = require('fs');
 
-fs.cp("CE-A.txt", "cse.txt", (err) => {
+fs.appendFile("CSE.txt", "\nNew Data Added", (err) => {
     if (err) {
         console.log("Error:", err);
     } else {
-        console.log("File copied");
+        console.log("Data appended successfully");
     }
 });
 
