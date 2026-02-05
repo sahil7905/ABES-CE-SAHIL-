@@ -23,8 +23,13 @@
 
 // })
 // myserver.listen(8000,()=>console.log("server is run"))
-const fs=require('fs');
-fs.cpSync("A.txt","IT-A.txt");
+
+
+// const fs=require('fs');
+// fs.cpSync("A.txt","IT-A.txt");
+
+const fs =require('fs')
+fs.appendFileSync("./IT-A.txt",`ans we are coader`);
 
 
 
