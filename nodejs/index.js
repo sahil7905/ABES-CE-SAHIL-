@@ -28,9 +28,22 @@
 // const fs=require('fs');
 // fs.cpSync("A.txt","IT-A.txt");
 
-const fs =require('fs')
-fs.appendFileSync("./IT-A.txt",`ans we are coader`);
+// const fs =require('fs')
+// fs.appendFileSync("./IT-A.txt",`ans we are coader`);
 
+// const fs=require('fs');
+// fs.unlinkSync("./IT-A.txt");
+
+
+const fs = require('fs');
+
+fs.cp("CE-A.txt", "cse.txt", (err) => {
+    if (err) {
+        console.log("Error:", err);
+    } else {
+        console.log("File copied");
+    }
+});
 
 
 
