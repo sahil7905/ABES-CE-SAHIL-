@@ -45,15 +45,26 @@
 //     }
 // });
 
-const fs = require('fs');
+// const fs = require('fs');
 
-fs.appendFile("CSE.txt", "\nNew Data Added", (err) => {
-    if (err) {
-        console.log("Error:", err);
-    } else {
-        console.log("Data appended successfully");
-    }
-});
+// fs.appendFile("CSE.txt", "\nNew Data Added", (err) => {
+//     if (err) {
+//         console.log("Error:", err);
+//     } else {
+//         console.log("Data appended successfully");
+//     }
+// });
+
+
+
+const os=require('os')
+console.log("plateform",os.platform()); // window os
+console.log("user",os.userInfo);
+console.log("cpu",os.arch());
+console.log("free memory",os.freemem(),"bytes");
+console.log("total memory",os.totalmem(),"bytes");
+console.log("system update",os.uptime());
+console.log("host name",os.hostname());
 
 
 
