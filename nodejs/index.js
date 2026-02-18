@@ -57,14 +57,14 @@
 
 
 
-const os=require('os')
-console.log("plateform",os.platform()); // window os
-console.log("user",os.userInfo);
-console.log("cpu",os.arch());
-console.log("free memory",os.freemem(),"bytes");
-console.log("total memory",os.totalmem(),"bytes");
-console.log("system update",os.uptime());
-console.log("host name",os.hostname());
+// const os=require('os')
+// console.log("plateform",os.platform()); // window os
+// console.log("user",os.userInfo);
+// console.log("cpu",os.arch());
+// console.log("free memory",os.freemem(),"bytes");
+// console.log("total memory",os.totalmem(),"bytes");
+// console.log("system update",os.uptime());
+// console.log("host name",os.hostname());
 
 
 
@@ -88,3 +88,21 @@ console.log("host name",os.hostname());
 // // fs.writeFileSync("abes.txt","abes provide btech and mtech")
 // const result=fs.readFileSync("./cse-a.txt","utf-8")
 // console.log(result);
+
+
+const http=require('http');
+const fs=require('fs');
+
+
+const home=fs.readFileSync('./a.html');
+
+
+ const myserver=http.createServer((req,res)=>{
+    res.statusCode=200;
+    res.end(home);
+    // res.setHeader('cotant-type ','text/plain');
+    // res.end("hello world");
+    
+})
+
+myserver.listen(8000,()=>console.log('server is runing'))

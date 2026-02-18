@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Courses</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        .navbar {
+            background-color: #002147;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+        }
+
+        .content {
+            padding: 60px;
+            text-align: center;
+            background: #f4f4f4;
+        }
+
+        .course-box {
+            background: white;
+            padding: 30px;
+            margin: 20px auto;
+            width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            width: 100%;
+            background-color: #002147;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #004080;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="/">Home</a>
+    <a href="/course">Course</a>
+    <a href="/login">Login</a>
+</div>
+
+<div class="content">
+    <h1>Our Courses</h1>
+
+    <div class="course-box">
+        <h2>B.Tech</h2>
+
+        <!-- Dropdown -->
+        <select>
+            <option>Select Branch</option>
+            <option>CSE</option>
+            <option>IT</option>
+            <option>ECE</option>
+            <option>Mechanical</option>
+            <option>Civil</option>
+            <option>Electrical</option>
+        </select>
+
+        <button>Select</button>
+    </div>
+
+    <div class="course-box">
+        <h2>M.Tech</h2>
+        <p>Computer Science</p>
+    </div>
+
+</div>
+
+</body>
+</html>
