@@ -1,108 +1,130 @@
-// const http=require('http');
+// // const http=require('http');
 
 
-// const myserver=http.createServer((req,res)=>{
-//     // console.log('serever 1');
-//     // res.end("this is my first server");
-//     if(req.url=='/'){
-//         res.end(`abes engineering college`);
+// // const myserver=http.createServer((req,res)=>{
+// //     // console.log('serever 1');
+// //     // res.end("this is my first server");
+// //     if(req.url=='/'){
+// //         res.end(`abes engineering college`);
 
         
 
-//     }
-//     else if(req.url=='/about'){
-//         res.end("we are studdent");
-//     }
-//     else if(req.url=='/class'){
-//         res.end("CE");
-//     }
-//     else
-//     {
-//         res.end("error");
-//     }
+// //     }
+// //     else if(req.url=='/about'){
+// //         res.end("we are studdent");
+// //     }
+// //     else if(req.url=='/class'){
+// //         res.end("CE");
+// //     }
+// //     else
+// //     {
+// //         res.end("error");
+// //     }
 
-// })
-// myserver.listen(8000,()=>console.log("server is run"))
+// // })
+// // myserver.listen(8000,()=>console.log("server is run"))
 
 
+// // const fs=require('fs');
+// // fs.cpSync("A.txt","IT-A.txt");
+
+// // const fs =require('fs')
+// // fs.appendFileSync("./IT-A.txt",`ans we are coader`);
+
+// // const fs=require('fs');
+// // fs.unlinkSync("./IT-A.txt");
+
+
+// // const fs = require('fs');
+
+// // fs.cp("CE-A.txt", "cse.txt", (err) => {
+// //     if (err) {
+// //         console.log("Error:", err);
+// //     } else {
+// //         console.log("File copied");
+// //     }
+// // });
+
+// // const fs = require('fs');
+
+// // fs.appendFile("CSE.txt", "\nNew Data Added", (err) => {
+// //     if (err) {
+// //         console.log("Error:", err);
+// //     } else {
+// //         console.log("Data appended successfully");
+// //     }
+// // });
+
+
+
+// // const os=require('os')
+// // console.log("plateform",os.platform()); // window os
+// // console.log("user",os.userInfo);
+// // console.log("cpu",os.arch());
+// // console.log("free memory",os.freemem(),"bytes");
+// // console.log("total memory",os.totalmem(),"bytes");
+// // console.log("system update",os.uptime());
+// // console.log("host name",os.hostname());
+
+
+
+
+
+
+
+// // const fs=require('fs')
+// // fs.writeFile("./IT-A.txt","we are student of it-a",()=>{ })
+
+//     // fs.readFile("./IT-A","utf-8",(err,result)=>{
+//     //     if(err){
+//     //         console.log("error",err);
+//     //     }
+//     //     else{
+//     //         console.log(result);
+//     //     }
+//     // })
+
+// // const fs=require('fs')
+// // // fs.writeFileSync("abes.txt","abes provide btech and mtech")
+// // const result=fs.readFileSync("./cse-a.txt","utf-8")
+// // console.log(result);
+
+
+// const http=require('http');
 // const fs=require('fs');
-// fs.cpSync("A.txt","IT-A.txt");
-
-// const fs =require('fs')
-// fs.appendFileSync("./IT-A.txt",`ans we are coader`);
-
-// const fs=require('fs');
-// fs.unlinkSync("./IT-A.txt");
 
 
-// const fs = require('fs');
-
-// fs.cp("CE-A.txt", "cse.txt", (err) => {
-//     if (err) {
-//         console.log("Error:", err);
-//     } else {
-//         console.log("File copied");
-//     }
-// });
-
-// const fs = require('fs');
-
-// fs.appendFile("CSE.txt", "\nNew Data Added", (err) => {
-//     if (err) {
-//         console.log("Error:", err);
-//     } else {
-//         console.log("Data appended successfully");
-//     }
-// });
+// const home=fs.readFileSync('./a.html');
 
 
-
-// const os=require('os')
-// console.log("plateform",os.platform()); // window os
-// console.log("user",os.userInfo);
-// console.log("cpu",os.arch());
-// console.log("free memory",os.freemem(),"bytes");
-// console.log("total memory",os.totalmem(),"bytes");
-// console.log("system update",os.uptime());
-// console.log("host name",os.hostname());
-
-
-
-
-
-
-
-// const fs=require('fs')
-// fs.writeFile("./IT-A.txt","we are student of it-a",()=>{ })
-
-    // fs.readFile("./IT-A","utf-8",(err,result)=>{
-    //     if(err){
-    //         console.log("error",err);
-    //     }
-    //     else{
-    //         console.log(result);
-    //     }
-    // })
-
-// const fs=require('fs')
-// // fs.writeFileSync("abes.txt","abes provide btech and mtech")
-// const result=fs.readFileSync("./cse-a.txt","utf-8")
-// console.log(result);
-
-
-const http=require('http');
-const fs=require('fs');
-
-
-const home=fs.readFileSync('./a.html');
-
-
- const myserver=http.createServer((req,res)=>{
-    res.statusCode=200;
-    res.end(home);
-    // res.setHeader('cotant-type ','text/plain');
-    // res.end("hello world");
+//  const myserver=http.createServer((req,res)=>{
+//     res.statusCode=200;
+//     res.end(home);
+//     // res.setHeader('cotant-type ','text/plain');
+//     // res.end("hello world");
     
-})
+    
+// })
 
-myserver.listen(8000,()=>console.log('server is runing'))
+// myserver.listen(8000,()=>console.log('server is runing'))
+
+
+
+// const http=require('/.a');
+// console.log(http);
+
+
+
+const fs = require('fs');
+const file = 'a.json';
+function deleteStudent(id){
+    let data=JSON .parse(fs.writeFileSync(file,'utf-8'))
+    data=data.filter(student=>student.id!=id)
+    fs.writeFileSync(file,JSON.stringify(data,null,2))
+
+    console.log("Student Deleted Successfully");
+}
+deleteStudent(2);
+
+
+
